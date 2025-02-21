@@ -1,0 +1,33 @@
+Modules list:
+-------------
+spcheader.o:
+    SPCHEADER         Offs=000000  Size=0000D3  Align=00001  Fill=0000
+    SPCFOOTER         Offs=000000  Size=000080  Align=00001  Fill=0000
+spcimage.o:
+    SPCIMAGE          Offs=000000  Size=000103  Align=00100  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+SPCFOOTER             000000  00007F  000080  00001
+SPCHEADER             000000  0000D2  0000D3  00001
+SPCIMAGE              000200  000302  000103  00100
+
+
+Exports list by name:
+---------------------
+spc_entry                 000300 RLA    
+
+
+Exports list by value:
+----------------------
+spc_entry                 000300 RLA    
+
+
+Imports list:
+-------------
+spc_entry (spcimage.o):
+    spcheader.o               src/spcheader.s(6)
+
